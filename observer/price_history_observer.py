@@ -2,27 +2,26 @@
 from observer.observer import Observer
 
 
-class PriceHistoryObserver(Observer): #наследява абстрактния клас Observer
+class PriceHistoryObserver(Observer): 
 
     def __init__(self):
-        self._history = [] #създава празен списък за историята на цените.
+        self._history = [] 
 
-    def update(self, component, old_price, new_price):#изпълнява се автоматично, когато PriceCatalog изпрати уведомление.
+    def update(self, component, old_price, new_price):
 
-        change = { #създава запис с името на компонента, старата и новата цена.
+        change = { 
             "component": component.name,
             "old_price": old_price,
             "new_price": new_price
         }
 
-        self._history.append(change) #добавя промяната в историята.
+        self._history.append(change) 
 
         print(
             f"Price changed: {component.name} | "
             f"{old_price:.2f} EUR -> {new_price:.2f} EUR"
         )
 
-    def get_history(self):#позволява да получим всички записани промени.
+    def get_history(self):
         return self._history
- #PriceHistoryObserver наследява Observer, защото представлява конкретен наблюдател и трябва да реализира метода update(). 
- #Subject има различна отговорност – управлява списъка с наблюдатели и изпраща уведомления.
+ 

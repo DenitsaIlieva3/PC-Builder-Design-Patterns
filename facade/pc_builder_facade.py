@@ -1,6 +1,3 @@
-#Façade Pattern осигурява опростен интерфейс към по-сложна система от класове. 
-# Той скрива вътрешната сложност и улеснява взаимодействието между потребителя 
-# и отделните компоненти на системата
 
 from configurations.base_configurations import OfficePC, GamingPC, ServerPC
 
@@ -20,12 +17,12 @@ class PCBuilderFacade:
         self.computer = None
         self._added_components = set()
 
-        self.price_catalog = PriceCatalog() #Създадохме каталог за цените.
-        self.price_history_observer = PriceHistoryObserver() #Създадохме наблюдател за историята.
+        self.price_catalog = PriceCatalog() 
+        self.price_history_observer = PriceHistoryObserver() 
 
-        self.price_catalog.attach(self.price_history_observer) #Регистрирахме наблюдателя чрез attach().
+        self.price_catalog.attach(self.price_history_observer) 
 
-        self._initialize_components() #Извикахме _initialize_components(), който по-късно ще добави наличните компоненти в каталога.
+        self._initialize_components() 
 
 
     def _initialize_components(self):

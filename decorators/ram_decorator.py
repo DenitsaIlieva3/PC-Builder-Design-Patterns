@@ -5,8 +5,8 @@ from decorators.computer_decorator import ComputerDecorator
 class RAMDecorator(ComputerDecorator):
 
     def __init__(self, computer, component):
-        super().__init__(computer) #Извиква конструктора на родителския клас ComputerDecorator
-        self.component = component #Запазваме конкретния RAM компонент, който добавяме.
+        super().__init__(computer) 
+        self.component = component 
 
     def get_description(self):
         return (
@@ -15,7 +15,7 @@ class RAMDecorator(ComputerDecorator):
         )
 
     def get_price(self):
-        return self._computer.get_price() + self.component.price #Вече не връщаме само базовата цена. Добавяме цената на RAM паметта.
+        return self._computer.get_price() + self.component.price 
 
     def get_performance(self):
         return (

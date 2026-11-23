@@ -1,7 +1,7 @@
 
 class ComponentProduct:
 
-    def __init__(self, name, category, price, performance_points):#Това е специален метод в Python, който се изпълнява при създаване на нов обект.
+    def __init__(self, name, category, price, performance_points):
         self.name = name
         self.category = category
         self.price = price

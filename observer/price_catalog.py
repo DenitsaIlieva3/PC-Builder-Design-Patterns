@@ -5,10 +5,10 @@ from observer.subject import Subject
 class PriceCatalog(Subject):
 
     def __init__(self):
-        super().__init__() #извикваме конструктора на родителския клас, за да се създаде списъкът с наблюдатели.
-        self._components = {} #създаваме речник, в който ще съхраняваме компонентите.
+        super().__init__() 
+        self._components = {} 
 
-    def add_component(self, component): #добавя компонент в каталога.
+    def add_component(self, component): 
         self._components[component.name] = component
 
     def get_component(self, component_name):
@@ -17,7 +17,7 @@ class PriceCatalog(Subject):
     def get_all_components(self):
         return self._components.copy()
 
-    def update_price(self, component_name, new_price): #променя цената на избран компонент и уведомява наблюдателите.
+    def update_price(self, component_name, new_price): 
 
         if component_name not in self._components:
             print("Component not found!")

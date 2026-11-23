@@ -1,8 +1,5 @@
 
 from abc import ABC, abstractmethod
-#ABC – позволява ни да създаваме абстрактни базови класове.
-
-#abstractmethod – обозначава метод, който задължително трябва да бъде реализиран от наследяващите класове.
 
 
 class Computer(ABC):
@@ -11,13 +8,13 @@ class Computer(ABC):
     """
 
     @abstractmethod
-    def get_description(self): #Връща описание на конфигурацията
+    def get_description(self):
         pass
 
     @abstractmethod
-    def get_price(self):#Връща нейната цена
+    def get_price(self):
         pass
 
     @abstractmethod
-    def get_performance(self):#Връща производителността ѝ
+    def get_performance(self):
         pass
