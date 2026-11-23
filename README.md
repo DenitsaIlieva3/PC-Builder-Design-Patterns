@@ -2,7 +2,9 @@
 
 ## Overview
 
-PC Builder is a Python console application that allows users to create computer configurations, customize them by adding hardware components, calculate the final price and performance, and manage component prices.
+PC Builder is a Python application that allows users to create computer configurations, customize them by adding hardware components, calculate the final price and performance, and manage component prices.
+
+The application provides both a **console interface** and a **graphical user interface (GUI)**.
 
 The project demonstrates the practical implementation of several object-oriented design patterns, including **Facade, Decorator, and Observer**.
 
@@ -23,6 +25,9 @@ The project demonstrates the practical implementation of several object-oriented
 - Track price changes through a price history observer.
 - Prevent adding the same component multiple times.
 - Validate user input and handle errors.
+- Graphical user interface for interacting with the application.
+- Display available components and their prices in a component catalog.
+- View component price history through the graphical interface.
 
 ## Design Patterns
 
@@ -42,6 +47,7 @@ The Observer pattern is used to monitor component price changes. When a componen
 
 - Python 3.11
 - Object-Oriented Programming
+- Tkinter
 - Visual Studio Code
 - Git
 - GitHub
@@ -67,6 +73,9 @@ PC_Builder/
 ├── facade/
 │   └── pc_builder_facade.py
 │
+├── gui/
+│   └── pc_builder_gui.py
+│
 ├── models/
 │   ├── computer.py
 │   └── component.py
@@ -83,6 +92,8 @@ PC_Builder/
 
 ## How to Run
 
+### Console Application
+
 1. Clone the repository:
 
 ```bash
@@ -95,11 +106,29 @@ git clone https://github.com/DenitsaIlieva3/PC-Builder-Design-Patterns.git
 cd PC-Builder-Design-Patterns
 ```
 
-3. Run the application:
+3. Run the console application:
 
 ```bash
 python main.py
 ```
+
+### Graphical User Interface
+
+To launch the graphical interface, run the following command from the project root directory:
+
+```bash
+python -m gui.pc_builder_gui
+```
+
+The graphical interface allows users to:
+
+- Select and create a base computer configuration.
+- Add hardware components.
+- View the current configuration.
+- See the total price and performance.
+- Browse the component catalog.
+- Update component prices.
+- View price history.
 
 ## Example
 
